@@ -12,11 +12,9 @@ Python写的，打包出来有点大
 ![image](https://github.com/3xsh0re/Social_Work_lib_EXE/assets/101967837/6db5db2c-e170-43f8-abae-58278744acbb)
 
 键入关键字：名字或者手机号搜索
-![image](https://github.com/REMIXXYH/Social_Work_lib_EXE/assets/101967837/3ea0e5d4-5160-47c1-875e-d6721fc96e8e)
-![image](https://github.com/REMIXXYH/Social_Work_lib_EXE/assets/101967837/97978714-41c5-4126-8757-77061b8d9609)
 
-一键查询含有sfz的结果（显示表中全部符合信息）：
-![image](https://github.com/REMIXXYH/Social_Work_lib_EXE/assets/101967837/1cbc59d6-76ad-48f0-9a61-9aeaf7e042bd)
+一键查询含有sfz的结果（显示表中全部符合信息）
+
 其他几个复选按钮效果类似，方便需要使用时快速食用
 
 以上就是目前能够实现的全部功能🐸
