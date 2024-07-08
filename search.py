@@ -3,7 +3,7 @@ import pandas as pd
 import re
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QHBoxLayout, QVBoxLayout, QPushButton, QWidget, QLineEdit, QTableWidget, QTableWidgetItem, QHeaderView, QMessageBox, QCheckBox, QFileDialog
 from PyQt5.QtGui import QIcon, QPixmap, QFont
-# 读取社工库.xlxs文件
+# 读取.xlxs文件
 global data_frame
 # 复选框模式:
 # 000->普通搜索;200->身份证;020->手机号;002->邮箱;
@@ -131,7 +131,7 @@ class MainWindow(QMainWindow):
         layout.addLayout(hcheckbox)
 
         # 设置文件选择按钮
-        self.file_button = QPushButton("选择社工库^_^")
+        self.file_button = QPushButton("选择你的xlsx文件^_^")
         self.file_button.clicked.connect(self.select_file)
         self.file_button.setFont(font_content)
         self.file_button.setStyleSheet("""
@@ -180,9 +180,9 @@ class MainWindow(QMainWindow):
             results = self.search(self.search_box.text())
             if results == 0 or len(results) == 0:
                 self.table_widget.setRowCount(1)
-                self.table_widget.setItem(0, 0, QTableWidgetItem("查不到哟~"))
+                self.table_widget.setItem(0, 0, QTableWidgetItem("查不到~"))
                 self.table_widget.setItem(0, 1, QTableWidgetItem("可能名字输错^_^"))
-                self.table_widget.setItem(0, 2, QTableWidgetItem("小库信息不多^<>^"))
+                self.table_widget.setItem(0, 2, QTableWidgetItem("信息不多^<>^"))
                 self.table_widget.setItem(0, 3, QTableWidgetItem("手机号错了?"))
                 self.table_widget.setItem(0, 4, QTableWidgetItem("Sad~~~"))
             else:
@@ -203,7 +203,7 @@ class MainWindow(QMainWindow):
             error_dialog.setWindowIcon(icon)
             error_dialog.setIcon(QMessageBox.Critical)
             error_dialog.setWindowTitle("Sad~~~")
-            error_dialog.setText("怎么没有选择社工库文件捏？")
+            error_dialog.setText("怎么没有选择文件捏？")
             error_dialog.exec_()
 
     # 搜索函数
@@ -216,7 +216,7 @@ class MainWindow(QMainWindow):
             error_dialog.setWindowIcon(icon)
             error_dialog.setIcon(QMessageBox.Critical)
             error_dialog.setWindowTitle("Sad~~~")
-            error_dialog.setText("怎么没有选择社工库文件捏？")
+            error_dialog.setText("怎么没有选择文件捏？")
             error_dialog.exec_()
             return 0
         else:
@@ -335,7 +335,7 @@ class MainWindow(QMainWindow):
         try:
             file_dialog = QFileDialog()
             file_dialog.setFileMode(QFileDialog.ExistingFile)  # 设置为选择现有文件
-            file_dialog.setNameFilters(["社工库表格 (*.xlsx)"])  # 设置文件过滤器
+            file_dialog.setNameFilters(["表格 (*.xlsx)"])  # 设置文件过滤器
             file_dialog.exec_()
             file_paths = file_dialog.selectedFiles()
             file_path = file_paths[0]
@@ -346,9 +346,9 @@ class MainWindow(QMainWindow):
                 icon = QIcon("./src/success.ico")
                 success_dialog.setWindowIcon(icon)
                 success_dialog.setWindowTitle("Success!!!")
-                success_dialog.setText(f"你的社工库路径是：{file_path}")
+                success_dialog.setText(f"你的文件路径是：{file_path}")
                 F = file_path.split("/")
-                self.file_button.setText(f"你选择的社工库是：{F[-1]} || 点击我换一个^_^")
+                self.file_button.setText(f"你选择的文件是：{F[-1]} || 点击我换一个^_^")
                 success_dialog.exec_()
         except Exception as e:
             error_dialog = QMessageBox()
@@ -356,7 +356,7 @@ class MainWindow(QMainWindow):
             error_dialog.setWindowIcon(icon)
             error_dialog.setIcon(QMessageBox.Critical)
             error_dialog.setWindowTitle("Sad~~~")
-            error_dialog.setText("怎么没有选择社工库文件捏？")
+            error_dialog.setText("怎么没有选择文件捏？")
             error_dialog.exec_()
 
 if __name__ == '__main__':
