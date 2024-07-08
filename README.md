@@ -9,7 +9,8 @@ Python写的，打包出来有点大
 然后呢点击exe，选择一个xlsx文件：
 ![image](https://github.com/3xsh0re/Social_Work_lib_EXE/assets/101967837/beac388c-8d85-4f46-9fc0-643fc7ef8028)
 选择成功：
-![image](https://github.com/REMIXXYH/Social_Work_lib_EXE/assets/101967837/baf305e0-5575-49bd-b2e5-113aaeb3c685)
+![image](https://github.com/3xsh0re/Social_Work_lib_EXE/assets/101967837/6db5db2c-e170-43f8-abae-58278744acbb)
+
 键入关键字：名字或者手机号搜索
 ![image](https://github.com/REMIXXYH/Social_Work_lib_EXE/assets/101967837/3ea0e5d4-5160-47c1-875e-d6721fc96e8e)
 ![image](https://github.com/REMIXXYH/Social_Work_lib_EXE/assets/101967837/97978714-41c5-4126-8757-77061b8d9609)
