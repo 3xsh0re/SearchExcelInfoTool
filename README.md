@@ -1,5 +1,5 @@
-# Social_Work_lib_EXE
-一个自用的**库查询小demo
+# SearchInfo
+一个查询小demo
 Python写的，打包出来有点大
 ![image](https://github.com/REMIXXYH/Social_Work_lib_EXE/assets/101967837/8103e2fc-445a-4802-b22e-5a0955a91148)
 
